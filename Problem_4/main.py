@@ -4,13 +4,8 @@ maxnum = 0
 for i in numlist:
 	for j in numlist:
 		k = i*j
-		templist = list(str(k))
-		templist.reverse()
-		tempstr = ''
-		for c in templist:
-			tempstr += c
-		kk = int(tempstr)
-		if k == kk and k > maxnum:
+		s = str(k)
+		if s == s[::-1] and k > maxnum:
 			maxnum = k
 print maxnum
 
