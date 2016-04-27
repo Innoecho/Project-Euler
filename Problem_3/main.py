@@ -1,12 +1,7 @@
 import math
+import time
 
-def isPrime(x):
-	factor = round(math.sqrt(x))
-	while factor>1:
-		if x%factor == 0:
-			return False
-		factor-=1
-	return True
+start = time.time()
 temp = n = 600851475143
 while 1:
 	a = int(math.sqrt(temp))
@@ -14,8 +9,8 @@ while 1:
 		if temp%x == 0:
 			break
 	if temp%x != 0:
-		print temp,'=',n
+		print temp
 		break
 	temp /= x
-	print x,'*',
+print time.time() - start
 	
